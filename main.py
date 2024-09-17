@@ -87,45 +87,47 @@ if section == "Home":
     """, unsafe_allow_html=True)
 
 elif section == "Vision & Mission":
-    with st.expander("Read more about our Vision & Mission"):
-        st.markdown("## Vision & Mission")
-        st.markdown("""
-        ### Vision:
-        Our vision is to make Shanthi Transport & Logistics the foremost choice for logistics services in the nation, offering unmatched solutions and exceptional delivery experiences. We aim to lead the industry by setting new standards in service quality, efficiency, and customer satisfaction.
+    
+    st.markdown("## Vision & Mission")
+    st.markdown("""
+    ### Vision:
+    Our vision is to make Shanthi Transport & Logistics the foremost choice for logistics services in the nation, offering unmatched solutions and exceptional delivery experiences. We aim to lead the industry by setting new standards in service quality, efficiency, and customer satisfaction.
 
-        ### Mission:
-        - To set the standard for quality in the logistics field through consistent demonstration of dependability, integrity, collaboration, innovation, and commitment to our stakeholders.
-        - To explore the final leg of the delivery process, from the distribution center to the end customer, focusing on efficiency and customer satisfaction.
-        - To continuously innovate and adapt to meet the evolving needs of our customers and the logistics industry.
+    ### Mission:
+    - To set the standard for quality in the logistics field through consistent demonstration of dependability, integrity, collaboration, innovation, and commitment to our stakeholders.
+    - To explore the final leg of the delivery process, from the distribution center to the end customer, focusing on efficiency and customer satisfaction.
+    - To continuously innovate and adapt to meet the evolving needs of our customers and the logistics industry.
 
-        ### Core Values:
-        - **Dependability**: We are committed to delivering on our promises and ensuring that our clients' goods reach their destinations safely and on time.
-        - **Integrity**: We operate with transparency and honesty in all our dealings.
-        - **Collaboration**: We believe in the power of teamwork and work closely with our clients to achieve shared goals.
-        - **Innovation**: We embrace new technologies and ideas to stay ahead in the logistics industry.
-        - **Commitment**: We are dedicated to providing the highest level of service to our clients.
-        """)
+    ### Core Values:
+    - **Dependability**: We are committed to delivering on our promises and ensuring that our clients' goods reach their destinations safely and on time.
+    - **Integrity**: We operate with transparency and honesty in all our dealings.
+    - **Collaboration**: We believe in the power of teamwork and work closely with our clients to achieve shared goals.
+    - **Innovation**: We embrace new technologies and ideas to stay ahead in the logistics industry.
+    - **Commitment**: We are dedicated to providing the highest level of service to our clients.
+    """)
 
 elif section == "Business Locations":
-    st.markdown("## Business Locations")
 
-    # Map displaying business locations
-    map_cities = folium.Map(location=[10.7905, 78.7047], zoom_start=8, control_scale=True)
-    cities = {
-        "Trichy": [10.7905, 78.7047],
-        "Thanjavur": [10.7867, 79.1378],
-        "Thiruvarur": [10.7731, 79.6361],
-        "Nagapattinam": [10.7654, 79.8420],
-        "Mayiladuthurai": [11.1034, 79.6552],
-        "Kumbakonam": [10.9601, 79.3883],
-    }
+    a,b = st.columns([2,2])
+    with a:
+        st.markdown("## Business Locations")
 
-    for city, coords in cities.items():
-        folium.Marker(location=coords, popup=city).add_to(map_cities)
+        # Map displaying business locations
+        map_cities = folium.Map(location=[10.7905, 78.7047], zoom_start=8, control_scale=True)
+        cities = {
+            "Trichy": [10.7905, 78.7047],
+            "Thanjavur": [10.7867, 79.1378],
+            "Thiruvarur": [10.7731, 79.6361],
+            "Nagapattinam": [10.7654, 79.8420],
+            "Mayiladuthurai": [11.1034, 79.6552],
+            "Kumbakonam": [10.9601, 79.3883],
+        }
 
-    folium_static(map_cities, height=600)
+        for city, coords in cities.items():
+            folium.Marker(location=coords, popup=city).add_to(map_cities)
 
-    with st.expander("See detailed business locations"):
+        folium_static(map_cities, height=600)
+    with b:
         st.markdown("""
         ### Locations Served:
         - **Naga Pvt. Ltd.**: Preambular, Trichy, Thanjavur, Thiruvarur, Nagapattinam, Mayiladuthurai
@@ -156,7 +158,7 @@ elif section == "Contact Us":
 
     - **Email**: shanthitransport.trichy@gmail.com
     - **Phone**: +91 9876543210
-    - **Address**: 123 Logistics Street, Trichy, Tamil Nadu, India
+    - **Address**: Trichy, Tamil Nadu, India
     """)
 
     with st.expander("Send us a message"):
