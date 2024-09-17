@@ -20,3 +20,5 @@ pyvis
 torch
 g4f
 curl-cffi
+folium
+streamlit-folium
