@@ -18,7 +18,7 @@ body {
 col1, col2 = st.columns([1, 3])
 
 with col1:
-    st.image("https://i.postimg.cc/52HShHb0/temp-Image-Rw-Qy-HQ.avif", width=250)
+    st.image("https://i.postimg.cc/wjKX24F6/temp-Image6p-PFg-G.avif", width=250)
 
 with col2:
     new_title = '<p style="font-family:cursive; color:#bfff00; font-size: 70px;">Shanthi Transport & Logistics</p>'
@@ -157,8 +157,8 @@ elif section == "Contact Us":
     Reach out to us for any inquiries or logistics solutions:
 
     - **Email**: shanthitransport.trichy@gmail.com
-    - **Phone**: +91 9876543210
-    - **Address**: Trichy, Tamil Nadu, India
+    - **Phone**: +91 82202 08358
+    - **Address**: Kollidam Road, Srirangam, Trichy, Tamil Nadu, India
     """)
 
     with st.expander("Send us a message"):
