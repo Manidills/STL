@@ -108,7 +108,7 @@ elif section == "Vision & Mission":
 
 elif section == "Business Locations":
 
-    a,b = st.columns([2,2])
+    a,b = st.columns([2,1])
     with a:
         st.markdown("## Business Locations")
 
